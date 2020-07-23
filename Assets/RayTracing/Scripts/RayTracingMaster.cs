@@ -51,6 +51,10 @@ public class RayTracingMaster : MonoBehaviour
     }
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            ScreenCapture.CaptureScreenshot(Time.time + "-" + _currentSample + ".png");
+        }
 
         if (_camera.fieldOfView != _lastFieldOfView)
         {
